@@ -34,29 +34,30 @@ const Main = () => {
             {
                 data: [220000000, 60000000, 200000000, 100000000, 50000000, 120000000, 30000000, 100000000, 70000000, 50000000],
                 backgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4BC0C0',
-                    '#9966FF',
-                    '#FF9F40',
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4BC0C0',
+                    '#8B0000', // Dark Red
+                    '#00008B', // Dark Blue
+                    '#B8860B', // Dark Goldenrod
+                    '#006400', // Dark Green
+                    '#4B0082', // Indigo
+                    '#8B4513', // Saddle Brown
+                    '#A52A2A', // Brown
+                    '#000080', // Navy
+                    '#556B2F', // Dark Olive Green
+                    '#2F4F4F'  // Dark Slate Gray
                 ],
                 hoverBackgroundColor: [
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4BC0C0',
-                    '#9966FF',
-                    '#FF9F40',
-                    '#FF6384',
-                    '#36A2EB',
-                    '#FFCE56',
-                    '#4BC0C0',
+                    '#8B0000', // Dark Red
+                    '#00008B', // Dark Blue
+                    '#B8860B', // Dark Goldenrod
+                    '#006400', // Dark Green
+                    '#4B0082', // Indigo
+                    '#8B4513', // Saddle Brown
+                    '#A52A2A', // Brown
+                    '#000080', // Navy
+                    '#556B2F', // Dark Olive Green
+                    '#2F4F4F'  // Dark Slate Gray
                 ],
+                
             },
         ],
     };

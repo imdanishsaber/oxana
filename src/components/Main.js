@@ -56,52 +56,47 @@ const Main = () => {
                     '#000080', // Navy
                     '#556B2F', // Dark Olive Green
                     '#2F4F4F'  // Dark Slate Gray
-                ],
-                
-            },
-        ],
+                ]
+            }
+        ]
     };
-
-
 
     const options = {
         plugins: {
             legend: {
-                position: 'bottom',
-                labels: {
-                    color: '#fff',
-                    font: {
-                        size: 14,
-                    },
-                },
+                display: false
             },
             datalabels: {
                 color: '#fff',
                 formatter: (value, context) => {
-                    const percentage = ((value / 1000000000) * 100).toFixed(2);
+                    const percentage = ((value / 1000000000) * 100).toFixed(0);
                     return `${context.chart.data.labels[context.dataIndex]}: ${percentage}%`;
                 },
                 font: {
                     weight: 'bold',
-                    size: 12,
+                    size: 12
                 },
-            },
+                align: 'end',
+                anchor: 'end',
+                clamp: true, // Ensures labels stay within the chart area
+                clip: false // Allows labels to extend outside the chart area if necessary
+            }
         },
         layout: {
             padding: {
-                left: 20,
-                right: 20,
+                left: 120,
+                right: 120,
                 top: 20,
-                bottom: 20,
-            },
+                bottom: 20
+            }
         },
         elements: {
             arc: {
-                width: 10,
-                borderWidth: 0,
-            },
+                width: 20,
+                borderWidth: 0
+            }
         },
-        cutout: '70%',
+        cutout: '60%'
     };
 
 
@@ -169,7 +164,7 @@ const Main = () => {
                                     AUDIT
                                 </a >
                                 <div className="my-4">
-                                    <iframe src="https://www.youtube.com/embed/MVKIcfgB02c?si=ku0TTT7F5E3zyrZf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/kc_hNnD9M-E?si=pAHjObEwY2vMgNGv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -180,33 +175,33 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            <div id='about' className="container"  data-aos="fade-up" data-aos-offset="100" data-aos-duration="300" data-aos-easing="ease-in-out">
+            <div id='about' className="container" data-aos="fade-up" data-aos-offset="100" data-aos-duration="300" data-aos-easing="ease-in-out">
                 <section className='why'>
                     <h1>
                         <img alt='' src={smrtlogo} />
-                        What is $SMRT Token
+                        What is $SMRT Token?
                     </h1>
                     <p>
-                        $SMRT is a token with real use case and has constant price pump with multiple rewards mechanism. The token is launched to promote, design, and deploy smart ecosystem to support global initiatives against global warming
+                        $SMRT is a token with real use case and has constant price pump with multiple rewards mechanism. The token is launched to promote, design, and deploy smart ecosystem to support global initiatives against global warming.
                     </p>
                     <div className="boxes">
 
                         <div className="box">
                             <img alt='' src={w1} />
-                            <p>Smart Ecosystem with multiple use cases including  investment opportunities in Renewable  Energy <br /> projects.</p>
-                        </div>
-                        <div className="box">
-                            <img alt='' src={w2} />
-                            <p>AI powered Application to support Research and Development of Renewable Energy <br /> solutions.</p>
+                            <p>Smart Ecosystem with multiple use cases including  investment opportunities in Renewable  Energy projects.</p>
                         </div>
                         <div className="box">
                             <img alt='' src={smrtlogo} />
+                            <p>AI powered Application to support Research and Development of Renewable Energy solutions.</p>
+                        </div>
+                        <div className="box">
+                            <img alt='' src={w2} />
                             <p>Renewable energy market is massive (around $1085 Billion) and continues to grow.</p>
                         </div>
                     </div>
                 </section>
             </div>
-            <div id='utility' className="container"  data-aos="fade-up" data-aos-offset="100" data-aos-duration="300" data-aos-easing="ease-in-out">
+            <div id='utility' className="container" data-aos="fade-up" data-aos-offset="100" data-aos-duration="300" data-aos-easing="ease-in-out">
                 <section className='utility'>
                     <h1>
                         $SMRT Token Utility
@@ -277,6 +272,8 @@ const Main = () => {
                                 <li> Test Centre</li>
                             </ul>
                         </div>
+                    </div>
+                    <div className="boxes justify-content-center">
                         <div className="box">
                             <small>Project Phase 4</small>
                             <h3>BRAND LAUNCH</h3>
@@ -306,7 +303,7 @@ const Main = () => {
                 </div>
             </section>
             <div className="container">
-                <section id='tokenomics' className='tokenomics'  data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <section id='tokenomics' className='tokenomics' data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
                     <h1>Tokenomics</h1>
                     <p>$SMRT Token has total supply of 1,000,000,000</p>
                     <div className="row justify-content-center">
@@ -362,8 +359,10 @@ const Main = () => {
                                 <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                     <div className="accordion-body">
                                         As of now, Smrtways ($SMRT) is in its presale phase, which means it is not yet available on traditional cryptocurrency exchanges. Beware of potential scams using Smrtways name.
-                                        The only legitimate way to participate in the Smrtways presale is through our official website at https://smrtways.io . Please exercise caution and ensure you're on the official platform to avoid fraudulent schemes.
-                                        For detailed instructions on how to buy $SMRT tokens, please consult our How to Buy guide at https://smrtways.io/how-to-buy
+                                        The only legitimate way to participate in the Smrtways presale is through our official website at <a href="https://smrtways.io" target='_blank'>https://smrtways.io</a>.
+                                        <br /><br />
+                                        Please exercise caution and ensure you're on the official platform to avoid fraudulent schemes.
+                                        {/* For detailed instructions on how to buy $SMRT tokens, please consult our How to Buy guide at https://smrtways.io/how-to-buy */}
                                     </div>
                                 </div>
                             </div>
@@ -424,7 +423,18 @@ const Main = () => {
                                         <br />
                                         Stay tuned for official announcements about the specific launch date and trading platforms by following our social media channels.
                                         <br /><br />
-                                        Never Share Your Seed Phrase or Private Key: Under no circumstances should you share your Seed Phrase or Private Key with anyone. These are sensitive and should be kept secure. Contact Us: Reach out to us at: https://smrtways.io/help to report the issue and seek guidance on how to proceed. Important Note: It's crucial to understand that we cannot recover lost funds. Beware of Scammers: Remember that we will never ask for your private details, such as your Seed Phrase or Private Key. Be cautious of potential scams and always verify the authenticity of the support you're engaging with.
+                                        Never Share Your Seed Phrase or Private Key: Under no circumstances should you share your Seed Phrase or Private Key with anyone. These are sensitive and should be kept secure.
+
+                                        Please remove the highlighted sentences and replace them with the following sines as it is:
+                                        <br />
+                                        <br />
+                                        Contact Us: Reach out to us on Telegram to report the issue and seek guidance on how to proceed.
+                                        <br />
+                                        <br />
+                                        Important Note: It's crucial to understand that we cannot recover lost funds.
+                                        <br />
+                                        <br />
+                                        Beware of Scammers: Remember that we will never ask for your private details, such as your Seed Phrase or Private Key. Be cautious of potential scams and always verify the authenticity of the support you're engaging with.
                                     </div>
                                 </div>
                             </div>

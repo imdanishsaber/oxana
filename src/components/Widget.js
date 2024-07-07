@@ -237,7 +237,7 @@ const Widget = ({ setMetamaskAccount }) => {
                         method = presaleContract.methods.buyFromNative(referral);
                         break;
                     case 'USDT':
-                        method = presaleContract.methods.buyFromUSDT(referral.amountInWei, 1);
+                        method = presaleContract.methods.buyFromUSDT(referral, amountInWei, 1);
                         break;
                     default:
                         throw new Error('Unsupported currency');
@@ -372,7 +372,7 @@ const Widget = ({ setMetamaskAccount }) => {
                 console.log('rateNextStageUsdt:', convertWeiToEther(rateNextStageUsdtNumber));
 
                 seEndTime(endTimeNumber)
-                setTotalSold(convertWeiToEther(totalSoldNumber))
+                setTotalSold(Number(convertWeiToEther(totalSoldNumber)).toFixed(0))
                 setRateStageBNB(convertWeiToEther(rateStageBNBNumber))
                 setRateStageUSDT(convertWeiToEther(rateStageUsdtNumber))
                 setRateNextStageUSDT(convertWeiToEther(rateNextStageUsdtNumber))
@@ -427,7 +427,7 @@ const Widget = ({ setMetamaskAccount }) => {
                 </div>
             </div>
             <div className="raised">
-                Tokens Sold:&nbsp; <b>${totalSold} / ${220000000}</b>
+                Tokens Sold:&nbsp; <b>{totalSold} / {220000000}</b>
 
             </div>
             <div className="balance">

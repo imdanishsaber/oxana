@@ -304,17 +304,17 @@ const Main = () => {
                 </div>
             </section>
             <div className="container">
-                <section id='tokenomics' className='tokenomics' data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <section id='tokenomics' className='tokenomics' data-aos="fade-up" data-aos-offset="100" data-aos-duration="300" data-aos-easing="ease-in-out">
                     <h1>Tokenomics</h1>
                     <p>$SMRT Token has total supply of 1,000,000,000</p>
                     <div className="row justify-content-center">
-                        <div className="col-12 col-lg-4" data-aos="fade-right" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                        <div className="col-12 col-lg-4">
                             <div className="d-flex justify-content-center align-items-center">
                                 <img alt='' src={table} />
                             </div>
                         </div>
                         <div className='col-12 col-lg-1'></div>
-                        <div className="col-12 col-lg-5" data-aos="fade-left" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                        <div className="col-12 col-lg-5">
                             <div className="d-flex justify-content-center align-items-center">
                                 <Doughnut data={data} options={options} />
                             </div>
@@ -323,7 +323,7 @@ const Main = () => {
                 </section>
             </div>
             <section id="faq" className="faq">
-                <div className="outer-container" data-aos="zoom-out-down" data-aos-offset="500" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <div className="outer-container" data-aos="fade-up" data-aos-offset="100" data-aos-duration="300" data-aos-easing="ease-in-out">
                     <div className='content-container'>
                         <h1>FAQ</h1>
                         <div className="accordion accordion-flush" id="accordionFlushExample">

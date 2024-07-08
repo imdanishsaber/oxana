@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Widget from './Widget'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
     ecosystem, research, investment, engagement,
     smrtlogo, w1, w2, table,
-    facebookwhite, twitterwhite, discordwhite, sharewhite, youtubewhite,
+    twitterwhite, sharewhite, youtubewhite,
 
 } from '../assets'
+import { TWITTER_LINK, TELEGRAM_LINK, YOUTUBE_LINK } from '../config/index'
 
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -463,11 +464,9 @@ const Main = () => {
                         <a href="">info@smrtways.io</a>
                     </p>
                     <div className="social-icons">
-                        <a href="#"> <img alt='' src={facebookwhite} /></a>
-                        <a href="#"> <img alt='' src={twitterwhite} /></a>
-                        <a href="#"> <img alt='' src={discordwhite} /></a>
-                        <a href="#"> <img alt='' src={sharewhite} /></a>
-                        <a href="#"> <img alt='' src={youtubewhite} /></a>
+                        <a href={TWITTER_LINK} target='_blank'> <img alt='' src={twitterwhite} /></a>
+                        <a href={TELEGRAM_LINK} target='_blank'> <img alt='' src={sharewhite} /></a>
+                        <a href={YOUTUBE_LINK} target='_blank'> <img alt='' src={youtubewhite} /></a>
                     </div>
                 </div>
             </footer>

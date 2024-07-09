@@ -198,9 +198,9 @@ body {
     left: 100px;
     width: calc(100% - 100px);
     margin-bottom: 50px;
-    @media (max-width: 575px) {
-      left: 50px;
-      width: calc(100% - 50px);
+    @media (max-width: 992px) {
+      left: 0;
+      width: calc(100%);
     }
   }
   .social-icons {
@@ -208,11 +208,12 @@ body {
     left: -100px;
     top: -90px;
     @media (max-width: 992px) {
-      top: -30px;
+      // top: -30px;
+      display: none;
     }
-    @media (max-width: 575px) {
-      left: -50px;
-    }
+    // @media (max-width: 575px) {
+    //   left: -50px;
+    // }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,6 +231,14 @@ body {
       &:hover {
         scale: 1.1;
       }
+    }
+  }
+  .text-center-local {
+    text-align: left;
+  }
+  @media (max-width: 992px) {
+    .text-center-local {
+      text-align: center;
     }
   }
   h1 {
@@ -667,6 +676,7 @@ body {
     justify-content: center;
     flex-direction: column;
     @media (max-width: 992px) {
+      align-items: center;
       width: 100%;
     }
     h1 {
@@ -677,6 +687,11 @@ body {
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 30px;
+      @media (max-width: 992px) {
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+      }
     }
     p {
       color: #fff;
@@ -685,6 +700,11 @@ body {
       font-style: normal;
       font-weight: 400;
       line-height: 35px;
+      @media (max-width: 992px) {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+      }
     }
     .btn-primary {
       border-radius: 10px;
@@ -738,6 +758,10 @@ body {
       font-style: normal;
       font-weight: 600;
       line-height: 30px;
+      @media (max-width: 992px) {
+        font-size: 17px;
+        line-height: 50px;
+      }
     }
   }
   .boxes {
@@ -750,10 +774,11 @@ body {
     .box {
       position: relative;
       padding: 20px 30px 30px 30px;
+      text-align: start;
       @media (max-width: 992px) {
+        text-align: center;
         padding: 30px 30px 30px 30px;
       }
-      text-align: start;
       &:nth-child(3) {
         &::after {
           content: none;
@@ -802,7 +827,7 @@ body {
       p {
         color: #fff;
         font-family: Inter;
-        font-size: 16px;
+        font-size: 17px;
         font-style: normal;
         font-weight: 400;
         line-height: 26px;
@@ -976,6 +1001,9 @@ body {
     line-height: normal;
     text-align: start;
     margin-bottom: 50px;
+    @media (max-width: 992px) {
+      text-align: center;
+    }
   }
   .partners {
     display: flex;
@@ -983,6 +1011,9 @@ body {
     gap: 15px 20px;
     flex-wrap: wrap;
     justify-content: start;
+    @media (max-width: 992px) {
+      justify-content: center;
+    }
     a {
       display: flex;
       padding: 5px;
@@ -1114,6 +1145,7 @@ body {
       text-align: start;
       flex-direction: column;
       @media (max-width: 992px) {
+        text-align: center;
         width: 100%;
       }
     }

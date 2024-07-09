@@ -91,19 +91,21 @@ const Main = () => {
                                     <li><img alt='' src={sharewhite} /></li>
                                     <li><img alt='' src={youtubewhite} /></li>
                                 </ul>
-                                <h1>
+                                <h1 className='text-center-local'>
                                     Empowering <br />
                                     Sustainability through
                                     <br />
                                     AI and Blockchain
                                 </h1>
-                                <p>Welcome to Oxana, where innovation meets sustainability. We invite you to join us in our ambitious mission to fight climate change, reduce the carbon footprint, and make the world a more sustainable </p>
-                                <button className='btn btn-primary' >
-                                    WHITEPAPER
-                                </button>
-                                <button className='btn btn-secondary' >
-                                    AUDIT
-                                </button>
+                                <p className='text-center-local'>Welcome to Oxana, where innovation meets sustainability. We invite you to join us in our ambitious mission to fight climate change, reduce the carbon footprint, and make the world a more sustainable </p>
+                                <div className='text-center-local'>
+                                    <button className='btn btn-primary' >
+                                        WHITEPAPER
+                                    </button>
+                                    <button className='btn btn-secondary' >
+                                        AUDIT
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div className="col-12 col-lg-1"></div>
@@ -114,13 +116,13 @@ const Main = () => {
                 </div>
             </section>
             <div className="container">
-                <section id='about' className='standards'>
-                    <div className="standards-left" data-aos="fade-right" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <section id='about' className='standards' data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                    <div className="standards-left">
                         <img alt='' src={standards} />
                     </div>
-                    <div className="standards-right" data-aos="fade-left" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                    <div className="standards-right">
                         <h1>
-                            Standards : <br />
+                            Standards <br />
                             Advancing the Oxana <br />
                             IBlockchain Experience
                         </h1>
@@ -235,14 +237,14 @@ const Main = () => {
                 </div>
             </section>
             <div className="container">
-                <section id='tokenomics' className='tokenomics'>
+                <section id='tokenomics' className='tokenomics' data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
                     <h1>Tokenomics</h1>
                     <div className="row">
-                        <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                        <div className="col-12 col-lg-6">
                             <img alt='' src={table} />
 
                         </div>
-                        <div className="col-12 col-lg-6" data-aos="fade-left" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                        <div className="col-12 col-lg-6">
                             <img alt='' src={chart} />
 
                         </div>
@@ -267,7 +269,7 @@ const Main = () => {
                         <img alt='' src={oxanablack} />
                     </div>
                 </section>
-                <section id='team' className='team' data-aos="zoom-in" data-aos-offset="500" data-aos-duration="600" data-aos-easing="ease-in-out">
+                {/* <section id='team' className='team' data-aos="zoom-in" data-aos-offset="500" data-aos-duration="600" data-aos-easing="ease-in-out">
                     <div className="row justify-content-center">
                         <div className="col-12">
                             <h1>Team</h1>
@@ -318,10 +320,10 @@ const Main = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </div>
-            <section id="faq" className="faq">
-                <div className="outer-container" data-aos="zoom-out-down" data-aos-offset="500" data-aos-duration="600" data-aos-easing="ease-in-out">
+            <section id="faq" className="faq" data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
+                <div className="outer-container" data-aos="zoom-in" data-aos-offset="500" data-aos-duration="600" data-aos-easing="ease-in-out">
                     <div className='content-container'>
                         <h1>FAQ</h1>
                         <p>Oxana is more than just an investment opportunity; it is a commitment to a sustainable future. By choosing Oxana, you are supporting a project that combines the best of technology and environmental science to create lasting positive change. Join us in our mission to fight climate change, reduce carbon footprints, and make the world a more sustainable place.</p>

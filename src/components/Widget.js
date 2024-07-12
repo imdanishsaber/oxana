@@ -590,7 +590,7 @@ const Widget = ({ setMetamaskAccount }) => {
                     <img alt='' src={bnb} /> BNB
                 </div>
                 <div className={`currency ${currency === 'BUSD' ? 'active' : ''}`} onClick={() => handleCurrencyChange('BUSD')}>
-                    <img alt='' src={busd} className='rounded' /> BUSD
+                    <img alt='' src={busd} className='rounded' /> USDT-Bep
                 </div>
 
                 <div className={`currency ${currency === 'CARD' ? 'active' : ''}`} onClick={() => handleCurrencyChange('CARD')}>
@@ -598,7 +598,7 @@ const Widget = ({ setMetamaskAccount }) => {
                 </div>
             </div>
             <div>
-                <label htmlFor="amountInput" className="form-label">Amount You Pay in {currency}:</label>
+                <label htmlFor="amountInput" className="form-label">Amount You Pay in {currency === 'BUSD' ? 'USDT-Bep' : currency}:</label>
                 <div className="input-wrapper">
                     <input
                         type="text"

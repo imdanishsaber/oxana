@@ -9,8 +9,61 @@ import {
     team1, team2, team3, team4,
 } from '../assets'
 
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
+
+
 const Main = () => {
     AOS.init();
+
+    const data = {
+        datasets: [
+            {
+                data: [15, 10, 25, 10, 25, 10, 5],
+                backgroundColor: ["#72F1C8", "#F7931A", "#317800", "#CB89F0", "#64C8FF", "#627EEA", "#0B131C"],
+            }
+        ]
+    };
+
+    const options = {
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                color: '#fff',
+                formatter: (value) => {
+                    return `${value}%`;
+                },
+                font: {
+                    weight: 'bold',
+                    size: 16
+                },
+                align: 'end',
+                anchor: 'end',
+                clamp: true,
+                clip: false
+            }
+        },
+        layout: {
+            padding: {
+                left: 30,
+                right: 30,
+                top: 30,
+                bottom: 30
+            }
+        },
+        elements: {
+            arc: {
+                width: 20,
+                borderWidth: 0
+            }
+        },
+        cutout: '60%'
+    };
+
 
     const [account, setAccount] = useState(null);
 
@@ -91,20 +144,22 @@ const Main = () => {
                                     <li><img alt='' src={sharewhite} /></li>
                                     <li><img alt='' src={youtubewhite} /></li>
                                 </ul>
-                                <h1 className='text-center-local'>
-                                    Empowering <br />
-                                    Sustainability through
-                                    <br />
-                                    AI and Blockchain
-                                </h1>
-                                <p className='text-center-local'>Welcome to Oxana, where innovation meets sustainability. We invite you to join us in our ambitious mission to fight climate change, reduce the carbon footprint, and make the world a more sustainable </p>
-                                <div className='text-center-local'>
-                                    <button className='btn btn-primary' >
-                                        WHITEPAPER
-                                    </button>
-                                    <button className='btn btn-secondary' >
-                                        AUDIT
-                                    </button>
+                                <div className='hero-text'>
+                                    <h1 className='text-center-local'>
+                                        Empowering <br />
+                                        Sustainability through
+                                        <br />
+                                        AI and Blockchain
+                                    </h1>
+                                    <p className='text-center-local'>Welcome to Oxana, where innovation meets sustainability. We invite you to join us in our ambitious mission to fight climate change, reduce the carbon footprint, and make the world a more sustainable </p>
+                                    <div className='text-center-local'>
+                                        <button className='btn btn-primary' >
+                                            WHITEPAPER
+                                        </button>
+                                        <button className='btn btn-secondary' >
+                                            AUDIT
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -240,14 +295,30 @@ const Main = () => {
                 <section id='tokenomics' className='tokenomics' data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">
                     <h1>Tokenomics</h1>
                     <div className="row">
-                        <div className="col-12 col-lg-6">
-                            <img alt='' src={table} />
-
+                        <div className="col-12 col-lg-6 d-flex justify-content-center">
+                            <div className="t-table">
+                                <div className="box">
+                                    <h3>OXANA HAS A TOTAL SUPPLY OF 200,000,000,000 TOKENS</h3>
+                                    <p>The $OXANA token is minted on Ethereum and is unique in that it can also be claimed, stored and traded on Solana, BNB Chain, Base, Polygon, or Avalanche using Wormhole and Portal Bridge tech.</p>
+                                    <ul>
+                                        <li><span className='t-name'>Presale Allocation </span><span className='t-per'>15%</span><span className='t-val'> 30,000,000,000</span> </li>
+                                        <li><span className='t-name'>Staking </span><span className='t-per'>10%</span><span className='t-val'> 20,000,000,000</span> </li>
+                                        <li><span className='t-name'>Project Funds </span><span className='t-per'>25%</span><span className='t-val'> 50,000,000,000</span> </li>
+                                        <li><span className='t-name'>Liquidity </span><span className='t-per'>10%</span><span className='t-val'> 20,000,000,000</span> </li>
+                                        <li><span className='t-name'>Marketing </span><span className='t-per'>25%</span><span className='t-val'> 50,000,000,000</span> </li>
+                                        <li><span className='t-name'>Ecosystem Funds </span><span className='t-per'>10%</span><span className='t-val'> 20,000,000,000</span> </li>
+                                        <li><span className='t-name'>Exchanges </span><span className='t-per'>5%</span><span className='t-val'> 10,000,000,000</span> </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-12 col-lg-6">
-                            <img alt='' src={chart} />
-
+                        <div className='col-12 col-lg-1'></div>
+                        <div className="col-12 col-lg-4">
+                            <div className="d-flex justify-content-center align-items-center h-100">
+                                <Doughnut data={data} options={options} />
+                            </div>
                         </div>
+                        <div className='col-12 col-lg-1'></div>
                     </div>
                 </section>
                 <section className="partner" data-aos="fade-up" data-aos-offset="300" data-aos-duration="600" data-aos-easing="ease-in-out">

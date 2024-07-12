@@ -3,7 +3,8 @@ export const TWITTER_LINK = "https://twitter.com/";
 export const TELEGRAM_LINK = "https://telegram.org/";
 export const YOUTUBE_LINK = "https://www.youtube.com/";
 
-export const WALLET_CONNECT_PROJECT_ID = "4ccdea696721815ff95dd66f72028dd6";
+export const WALLET_CONNECT_PROJECT_ID = "YOUR_PROJECT_ID";
+
 export const INFURA_RPC_URL_BINANCE = "https://bsc-dataseed.binance.org/";
 
 export const PRESALE_CONTRACT_ADDRESS = "0xa8445807a1Bd383928041566F86C7C2ef7d528bc";

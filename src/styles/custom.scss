@@ -872,7 +872,7 @@ iframe {
 
   .box {
     max-width: 422px;
-    flex: 1 1 240px; /* Allows the box to grow and shrink as needed with a minimum width of 240px */
+    flex: 1 1 240px;
     text-align: start;
     padding: 40px 20px;
     border-radius: 20px;
@@ -885,6 +885,10 @@ iframe {
     backdrop-filter: blur(20px);
     position: relative; /* Ensures the pseudo-element ::before is positioned correctly */
 
+    @media (max-width: 992px) {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
     @media (max-width: 575px) {
       padding: 20px;
       margin: 20px 0;
